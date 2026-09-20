@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Local data
+data/code_alpaca_20k.json
+data/*.jsonl
+data/*.json
+
+# Model weights and checkpoints
+model/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Hugging Face / ML caches
+.cache/
+.huggingface/
+transformers_cache/
+hf_cache/
+
+# Logs / generated outputs
+logs/
+outputs/
+results/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.pem
