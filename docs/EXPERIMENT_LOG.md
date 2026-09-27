@@ -568,3 +568,43 @@ The next repository update should contain:
 7. Error categories.
 8. A final conclusion based on measured evidence.
 
+
+---
+
+## Phase 18 — Initial Held-Out Evaluation
+
+Two separate 50-example evaluations were completed on the 534-example held-out test set.
+
+### Generation evaluation
+
+```text
+Base mean generation time: 62.69 s
+Fine-tuned mean generation time: 219.82 s
+Base mean throughput: 7.89 tok/s
+Fine-tuned mean throughput: 4.38 tok/s
+Base hit 1024-token ceiling: 6/50
+Fine-tuned hit 1024-token ceiling: 46/50
+```
+
+The fine-tuned model frequently generated much longer responses, so generation time should not be interpreted as a standalone inference-speed metric.
+
+### Functional execution evaluation
+
+```text
+Base executed successfully: 11/50 (22.0%)
+Fine-tuned executed successfully: 44/50 (88.0%)
+```
+
+The evaluator classified many base outputs as `syntax_error`, `no_code`, or `no_function`. The fine-tuned model converted most of these cases into executable outputs.
+
+This is an executability measurement, not a semantic correctness score.
+
+### Evidence
+
+The terminal screenshot showing the 50-example functional evaluation is the official report evidence for this stage.
+
+### Current interpretation
+
+The initial held-out evidence supports a substantial increase in generated-code executability after QLoRA fine-tuning. It does not by itself establish semantic correctness, benchmark superiority, or general real-world programming improvement.
+
+The next meaningful experiment is task-level correctness/error analysis, followed where compatible by an established coding benchmark such as HumanEval or MBPP.
