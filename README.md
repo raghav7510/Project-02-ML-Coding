@@ -1,6 +1,6 @@
 # Project 02 — Fine-Tuning Qwen3.5-4B for Python & ML Coding with QLoRA
 
-> **Status: Fine-tuning complete · Evaluation in progress**
+> **Status: Fine-tuning complete · Initial held-out evaluation complete**
 
 This repository documents an end-to-end experiment in **parameter-efficient fine-tuning of Qwen3.5-4B-Base for Python and ML/Data Science coding** using **QLoRA** on a consumer laptop with an **NVIDIA RTX 4050 Laptop GPU (6 GB VRAM)**.
 
@@ -1045,14 +1045,17 @@ A broad finance keyword filter produced thousands of false positives. The final 
 - [x] Full QLoRA training
 - [x] Final adapter saved
 
+### Completed
+
+- [x] Initial held-out generation evaluation (50 examples)
+- [x] Functional execution evaluation (50 examples)
+- [x] Aggregate evaluation artifacts saved locally
+
 ### In progress / next
 
-- [ ] Held-out test evaluation
-- [ ] Base vs fine-tuned generation comparison
-- [ ] Code execution evaluation
+- [ ] Semantic correctness / task-level execution scoring
 - [ ] HumanEval/MBPP compatibility check
-- [ ] Error analysis
-- [ ] Final quantitative comparison
+- [ ] Detailed error analysis
 - [ ] Final project report
 
 ---
@@ -1074,4 +1077,4 @@ This repository intentionally documents both the successful result and the failu
 
 The goal is not simply to show that a QLoRA adapter was produced. The goal is to make the experiment **auditable, reproducible, resource-aware, and quantitatively testable**.
 
-**Fine-tuning is complete. Evaluation determines whether the adaptation actually helped.**
+**Fine-tuning is complete. Initial held-out evaluation shows a large executability improvement; semantic correctness remains to be measured.**
